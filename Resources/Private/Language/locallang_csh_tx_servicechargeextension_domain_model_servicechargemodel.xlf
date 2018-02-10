@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-02-10T15:03:46Z" product-name="servicechargeextension">
+		<header/>
+		<body>
+			<trans-unit id="servicetype.description">
+				<source>servicetype</source>
+			</trans-unit>
+			<trans-unit id="chargesin_i_n_r.description">
+				<source>chargesinINR</source>
+			</trans-unit>
+			<trans-unit id="mindaystodeliver.description">
+				<source>mindaystodeliver</source>
+			</trans-unit>
+			<trans-unit id="rangeofareainkm.description">
+				<source>rangeofareainkm</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

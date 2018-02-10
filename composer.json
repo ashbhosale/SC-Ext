@@ -1,0 +1,19 @@
+{
+    "name": "servicechargeextension/servicechargeextension",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "Mayank, Aishwarya",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "ServiceChargeExtension\\Servicechargeextension\\": "Classes"
+        }
+    }
+}

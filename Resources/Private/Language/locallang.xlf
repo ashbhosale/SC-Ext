@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-02-10T15:03:46Z" product-name="servicechargeextension">
+		<header/>
+		<body>
+			<trans-unit id="tx_servicechargeextension_domain_model_servicechargemodel">
+				<source>Service Charge Model</source>
+			</trans-unit>
+			<trans-unit id="tx_servicechargeextension_domain_model_servicechargemodel.servicetype">
+				<source>Servicetype</source>
+			</trans-unit>
+			<trans-unit id="tx_servicechargeextension_domain_model_servicechargemodel.chargesin_i_n_r">
+				<source>Chargesin I N R</source>
+			</trans-unit>
+			<trans-unit id="tx_servicechargeextension_domain_model_servicechargemodel.mindaystodeliver">
+				<source>Mindaystodeliver</source>
+			</trans-unit>
+			<trans-unit id="tx_servicechargeextension_domain_model_servicechargemodel.rangeofareainkm">
+				<source>Rangeofareainkm</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
