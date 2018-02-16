@@ -1,23 +1,79 @@
 <html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-	<f:layout name="Default" />
+<f:layout name="Default" />
 
-	This Template is responsible for displaying a single view for a domain object
+This Template is responsible for displaying a single view for a domain object
 
-	If you modify this template, do not forget to change the overwrite settings
-	in /Configuration/ExtensionBuilder/settings.yaml:
-	  Resources:
-		Private:
-		  Templates:
-			Show.html: keep
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+Show.html: keep
 
-	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
-	<f:section name="content">
-		<h1>Single View for ServiceChargeModel</h1>
-
-		<f:flashMessages />
-		<f:render partial="ServiceChargeModel/Properties" arguments="{serviceChargeModel:serviceChargeModel}" />
-		<f:link.action action="list">Back to list</f:link.action><br />
-		<f:link.action action="new">New ServiceChargeModel</f:link.action>
-	</f:section>
+<f:section name="content">
+	<h1>Service Information</h1>
+	<f:flashMessages />
+	<f:render partial="ServiceChargeModel/Properties" arguments="{serviceChargeModel:serviceChargeModel}" />
+    <f:if condition="{serviceChargeModel.servicetype} == 'Deliver Grocery'}">
+        <p>&nbsp;&nbsp; Description : Deliver grocery and fruits to your loved ones. Our range of product includes : </p>
+        <ol>1. Pulses</ol>
+        <ol>2. Edible Oils</ol>
+        <ol>3. Dry fruits and nuts</ol>
+        <ol>4. Spices</ol>
+        <ol>5. Ghee</ol>
+        <f:image src="EXT:servicechargeextension/Resources/Public/Images/grocery.jpg" alt="alt text" />
+    </f:if>
+    <f:if condition="{serviceChargeModel.servicetype} == 'Deliver Furniture'}">
+        <p>&nbsp;&nbsp; Description : Deliver various furniture items like: </p>
+        <ol>1. Table</ol>
+        <ol>2. Chair</ol>
+        <ol>3. Bed</ol>
+        <ol>4. Clock</ol>
+        <ol>5. Desk</ol>
+        <f:image src="EXT:servicechargeextension/Resources/Public/Images/furniture.jpg" alt="alt text" />
+    </f:if>
+    <f:if condition="{serviceChargeModel.servicetype} == 'Deliver Pharmaceutical Items'}">
+        <p>&nbsp;&nbsp; Description : Deliver medicines for children,Old people </p>
+        <ol>1. Eye drops</ol>
+        <ol>2. Tablets or capsules</ol>
+        <ol>3. Cream and Ointment</ol>
+        <ol>4. Ear drops</ol>
+        <ol>5. Bandage</ol>
+        <f:image src="EXT:servicechargeextension/Resources/Public/Images/pharma.jpg" alt="alt text" />
+    </f:if>
+    <f:if condition="{serviceChargeModel.servicetype} == 'Deliver Bakery Items'}">
+        <p>&nbsp;&nbsp; Description : Deliver fresh bakery items. Product list for the bakery items are: </p>
+        <ol>1. Breads</ol>
+        <ol>2. Cakes</ol>
+        <ol>3. Muffins</ol>
+        <ol>4. Pastries</ol>
+        <ol>5. Biscuits</ol>
+        <f:image src="EXT:servicechargeextension/Resources/Public/Images/bakery.jpg" alt="alt text" />
+    </f:if>
+    <f:link.action action="list"><p>Back to list</f:link.action><br />
+</f:section>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

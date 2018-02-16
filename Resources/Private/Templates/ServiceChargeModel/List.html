@@ -1,44 +1,57 @@
+
+
 <html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-	<f:layout name="Default" />
+<f:layout name="Default" />
 
-	This Template is responsible for creating a table of domain objects.
+This Template is responsible for creating a table of domain objects.
 
-	If you modify this template, do not forget to change the overwrite settings
-	in /Configuration/ExtensionBuilder/settings.yaml:
-	  Resources:
-		Private:
-		  Templates:
-			List.html: keep
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+List.html: keep
 
-	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
-	<f:section name="content">
-		<h1>Listing for ServiceChargeModel</h1>
+<f:section name="content">
+	<h1>Listing of Services</h1>
 
-		<f:flashMessages />
+	<f:flashMessages />
 
-		<table  class="tx_servicechargeextension" >
-			<tr>
-				<th><f:translate key="tx_servicechargeextension_domain_model_servicechargemodel.servicetype" /></th>
-				<th><f:translate key="tx_servicechargeextension_domain_model_servicechargemodel.chargesin_i_n_r" /></th>
-				<th><f:translate key="tx_servicechargeextension_domain_model_servicechargemodel.mindaystodeliver" /></th>
-				<th><f:translate key="tx_servicechargeextension_domain_model_servicechargemodel.rangeofareainkm" /></th>
-				<th> </th>
-				<th> </th>
-			</tr>
+	<table  class="tx_servicechargeextension" >
 
-			<f:for each="{serviceChargeModels}" as="serviceChargeModel">
+		<div class="container">
+
+			<table class="table table-bordered">
+				<thead>
+
 				<tr>
-					<td><f:link.action action="show" arguments="{serviceChargeModel : serviceChargeModel}"> {serviceChargeModel.servicetype}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{serviceChargeModel : serviceChargeModel}"> {serviceChargeModel.chargesinINR}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{serviceChargeModel : serviceChargeModel}"> {serviceChargeModel.mindaystodeliver}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{serviceChargeModel : serviceChargeModel}"> {serviceChargeModel.rangeofareainkm}</f:link.action></td>
-					<td><f:link.action action="edit" arguments="{serviceChargeModel : serviceChargeModel}">Edit</f:link.action></td>
-					<td><f:link.action action="delete" arguments="{serviceChargeModel : serviceChargeModel}">Delete</f:link.action></td>
+					<th><f:translate key="tx_servicechargeextension_domain_model_servicechargemodel.servicetype" /></th>
+					<th><f:translate key="tx_servicechargeextension_domain_model_servicechargemodel.chargesin_i_n_r" /></th>
+					<th><f:translate key="tx_servicechargeextension_domain_model_servicechargemodel.mindaystodeliver" /></th>
+					<th><f:translate key="tx_servicechargeextension_domain_model_servicechargemodel.rangeofareainkm" /></th>
 				</tr>
-			</f:for>
-		</table>
 
-		<f:link.action action="new">New ServiceChargeModel</f:link.action>
-	</f:section>
+
+				</thead>
+				<tbody>
+
+				<f:for each="{serviceChargeModels}" as="serviceChargeModel">
+
+					<tr>
+						<td><f:link.action action="show" arguments="{serviceChargeModel : serviceChargeModel}"> {serviceChargeModel.servicetype}</f:link.action></td>
+
+						<td><span> {serviceChargeModel.chargesinINR}</span></td>
+						<td><span> {serviceChargeModel.mindaystodeliver}</span></td>
+						<td><span> {serviceChargeModel.rangeofareainkm}</span></td>
+
+					</tr>
+				</f:for>
+				</tbody>
+			</table>
+		</div>
+	</table>
+
+</f:section>
 </html>
